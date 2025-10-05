@@ -633,6 +633,16 @@ namespace event = {
   }
 }
 namespace control = {
+  wait = {
+    "opcode": "control_wait",
+    "type": "command",
+    "args": [
+      {
+        "name": "DURATION",
+        "type": "any"
+      }
+    ]
+  }
   until = {
     "opcode": "control_repeat_until",
     "type": "command",
