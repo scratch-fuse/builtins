@@ -1,7 +1,7 @@
 namespace motion = {
   moveSteps = {
     "opcode": "motion_movesteps",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "STEPS",
@@ -11,7 +11,7 @@ namespace motion = {
   }
   turnRight = {
     "opcode": "motion_turnright",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "DEGREES",
@@ -21,7 +21,7 @@ namespace motion = {
   }
   turnLeft = {
     "opcode": "motion_turnleft",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "DEGREES",
@@ -31,7 +31,7 @@ namespace motion = {
   }
   goTo = {
     "opcode": "motion_goto",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "TO",
@@ -41,7 +41,7 @@ namespace motion = {
   }
   setXY = {
     "opcode": "motion_gotoxy",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "X",
@@ -56,7 +56,7 @@ namespace motion = {
   // Note: TO: _mouse_ or _random_
   glideTo = {
     "opcode": "motion_glideto",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "SECS",
@@ -70,7 +70,7 @@ namespace motion = {
   }
   glide = {
     "opcode": "motion_glidesecstoxy",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "SECS",
@@ -88,7 +88,7 @@ namespace motion = {
   }
   pointInDirection = {
     "opcode": "motion_pointindirection",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "DIRECTION",
@@ -99,7 +99,7 @@ namespace motion = {
   // Note: TOWARDS: _random_, _mouse_
   pointTowards = {
     "opcode": "motion_pointtowards",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "TOWARDS",
@@ -109,7 +109,7 @@ namespace motion = {
   }
   changeX = {
     "opcode": "motion_changexby",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "DX",
@@ -119,7 +119,7 @@ namespace motion = {
   }
   setX = {
     "opcode": "motion_setx",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "X",
@@ -129,7 +129,7 @@ namespace motion = {
   }
   changeY = {
     "opcode": "motion_changeyby",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "DY",
@@ -139,7 +139,7 @@ namespace motion = {
   }
   setY = {
     "opcode": "motion_sety",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "Y",
@@ -149,12 +149,12 @@ namespace motion = {
   }
   ifOnEdgeBounce = {
     "opcode": "motion_ifonedgebounce",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   setRotationStyle = {
     "opcode": "motion_setrotationstyle",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "STYLE",
@@ -169,24 +169,24 @@ namespace motion = {
   }
   x = {
     "opcode": "motion_xposition",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
   y = {
     "opcode": "motion_yposition",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
   direction = {
     "opcode": "motion_direction",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
 }
 namespace looks = {
   sayForSecs = {
     "opcode": "looks_sayforsecs",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "MESSAGE",
@@ -200,7 +200,7 @@ namespace looks = {
   }
   say = {
     "opcode": "looks_say",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "MESSAGE",
@@ -210,7 +210,7 @@ namespace looks = {
   }
   thinkForSecs = {
     "opcode": "looks_thinkforsecs",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "MESSAGE",
@@ -224,7 +224,7 @@ namespace looks = {
   }
   think = {
     "opcode": "looks_think",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "MESSAGE",
@@ -234,7 +234,7 @@ namespace looks = {
   }
   switchCostume = {
     "opcode": "looks_switchcostumeto",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "COSTUME",
@@ -244,12 +244,12 @@ namespace looks = {
   }
   nextCostume = {
     "opcode": "looks_nextcostume",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   switchBackdrop = {
     "opcode": "looks_switchbackdropto",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "BACKDROP",
@@ -259,12 +259,12 @@ namespace looks = {
   }
   nextBackdrop = {
     "opcode": "looks_nextbackdrop",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   changeSize = {
     "opcode": "looks_changesizeby",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "DSIZE",
@@ -274,7 +274,7 @@ namespace looks = {
   }
   setSize = {
     "opcode": "looks_setsizeto",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "SIZE",
@@ -284,7 +284,7 @@ namespace looks = {
   }
   changeEffect = {
     "opcode": "looks_changeeffectby",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "EFFECT",
@@ -307,7 +307,7 @@ namespace looks = {
   }
   setEffect = {
     "opcode": "looks_seteffectto",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "EFFECT",
@@ -330,22 +330,22 @@ namespace looks = {
   }
   clearEffects = {
     "opcode": "looks_cleareffects",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   show = {
     "opcode": "looks_show",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   hide = {
     "opcode": "looks_hide",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   setLayer = {
     "opcode": "looks_gotofrontback",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "FRONT_BACK",
@@ -359,7 +359,7 @@ namespace looks = {
   }
   _changeLayer = {
     "opcode": "looks_goforwardbackwardlayers",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "FORWARD_BACKWARD",
@@ -377,7 +377,7 @@ namespace looks = {
   }
   changeLayer = {
     "opcode": "looks_goforwardbackwardlayers",
-    "type": "command",
+    "type": "void",
     "fields": {
       "FORWARD_BACKWARD": "forward"
     },
@@ -390,7 +390,7 @@ namespace looks = {
   }
   costumeName = {
     "opcode": "looks_costumenumbername",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "NUMBER_NAME": "name"
     },
@@ -398,7 +398,7 @@ namespace looks = {
   }
   costumeNumber = {
     "opcode": "looks_costumenumbername",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "NUMBER_NAME": "number"
     },
@@ -406,7 +406,7 @@ namespace looks = {
   }
   backdropName = {
     "opcode": "looks_backdropnumbername",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "NUMBER_NAME": "name"
     },
@@ -414,7 +414,7 @@ namespace looks = {
   }
   backdropNumber = {
     "opcode": "looks_backdropnumbername",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "NUMBER_NAME": "number"
     },
@@ -422,7 +422,7 @@ namespace looks = {
   }
   size = {
     "opcode": "looks_size",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
 }
@@ -430,7 +430,7 @@ namespace looks = {
 namespace sound = {
   playSound = {
     "opcode": "sound_play",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "SOUND",
@@ -440,7 +440,7 @@ namespace sound = {
   }
   playSoundAwait = {
     "opcode": "sound_playuntildone",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "SOUND",
@@ -450,12 +450,12 @@ namespace sound = {
   }
   stopAllSounds = {
     "opcode": "sound_stopallsounds",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   changeEffect = {
     "opcode": "sound_changeeffectby",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "EFFECT",
@@ -473,7 +473,7 @@ namespace sound = {
   }
   setEffect = {
     "opcode": "sound_seteffectto",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "EFFECT",
@@ -491,12 +491,12 @@ namespace sound = {
   }
   clearEffects = {
     "opcode": "sound_cleareffects",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   changeVolume = {
     "opcode": "sound_changevolumeby",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "VOLUME",
@@ -506,7 +506,7 @@ namespace sound = {
   }
   setVolume = {
     "opcode": "sound_setvolumeto",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "VOLUME",
@@ -516,7 +516,7 @@ namespace sound = {
   }
   volume = {
     "opcode": "sound_volume",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
 }
@@ -613,7 +613,7 @@ namespace event = {
   }
   broadcast = {
     "opcode": "event_broadcast",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "BROADCAST_INPUT",
@@ -623,7 +623,7 @@ namespace event = {
   }
   broadcastAwait = {
     "opcode": "event_broadcastandwait",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "BROADCAST_INPUT",
@@ -635,7 +635,7 @@ namespace event = {
 namespace control = {
   wait = {
     "opcode": "control_wait",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "DURATION",
@@ -645,7 +645,7 @@ namespace control = {
   }
   until = {
     "opcode": "control_repeat_until",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "CONDITION",
@@ -659,7 +659,7 @@ namespace control = {
   }
   repeat = {
     "opcode": "control_repeat",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "TIMES",
@@ -673,7 +673,7 @@ namespace control = {
   }
   watch = {
     "opcode": "control_wait_until",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "CONDITION",
@@ -683,7 +683,7 @@ namespace control = {
   }
   stop = {
     "opcode": "control_stop",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "STOP_OPTION",
@@ -698,7 +698,7 @@ namespace control = {
   }
   clone = {
     "opcode": "control_create_clone_of",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "CLONE_OPTION",
@@ -708,7 +708,7 @@ namespace control = {
   }
   deleteSelf = {
     "opcode": "control_delete_this_clone",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   onClone = {
@@ -756,7 +756,7 @@ namespace sensing = {
   // NOTE: DISTANCETOMENU: _mouse_ or sprite name
   distanceTo = {
     "opcode": "sensing_distanceto",
-    "type": "reporter",
+    "type": "any",
     "args": [
       {
         "name": "DISTANCETOMENU",
@@ -766,12 +766,12 @@ namespace sensing = {
   }
   ask = {
     "opcode": "sensing_askandwait",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   askAnswer = {
     "opcode": "sensing_answer",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
   isKeyPressed = {
@@ -786,17 +786,17 @@ namespace sensing = {
   }
   mouseX = {
     "opcode": "sensing_mousex",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
   mouseY = {
     "opcode": "sensing_mousey",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
   setDragMode = {
     "opcode": "sensing_setdragmode",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "DRAG_MODE",
@@ -810,22 +810,22 @@ namespace sensing = {
   }
   loudness = {
     "opcode": "sensing_loudness",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
   timer = {
     "opcode": "sensing_timer",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
   resetTimer = {
     "opcode": "sensing_resettimer",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   of = {
     "opcode": "sensing_of",
-    "type": "reporter",
+    "type": "any",
     "args": [
       {
         "name": "OBJECT",
@@ -840,7 +840,7 @@ namespace sensing = {
   }
   current = {
     "opcode": "sensing_current",
-    "type": "reporter",
+    "type": "any",
     "args": [
       {
         "name": "CURRENTMENU",
@@ -859,19 +859,19 @@ namespace sensing = {
   }
   daysSince2000 = {
     "opcode": "sensing_dayssince2000",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
   username = {
     "opcode": "sensing_username",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
 }
 namespace math = {
   random = {
     "opcode": "operator_random",
-    "type": "reporter",
+    "type": "any",
     "args": [
       {
         "name": "FROM",
@@ -885,7 +885,7 @@ namespace math = {
   }
   round = {
     "opcode": "operator_round",
-    "type": "reporter",
+    "type": "any",
     "args": [
       {
         "name": "NUM",
@@ -896,7 +896,7 @@ namespace math = {
   // mathop
   abs = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "abs"
     },
@@ -909,7 +909,7 @@ namespace math = {
   }
   floor = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "floor"
     },
@@ -922,7 +922,7 @@ namespace math = {
   }
   ceil = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "ceiling"
     },
@@ -935,7 +935,7 @@ namespace math = {
   }
   sqrt = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "sqrt"
     },
@@ -948,7 +948,7 @@ namespace math = {
   }
   sin = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "sin"
     },
@@ -961,7 +961,7 @@ namespace math = {
   }
   cos = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "cos"
     },
@@ -974,7 +974,7 @@ namespace math = {
   }
   tan = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "tan"
     },
@@ -987,7 +987,7 @@ namespace math = {
   }
   asin = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "asin"
     },
@@ -1000,7 +1000,7 @@ namespace math = {
   }
   acos = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "acos"
     },
@@ -1013,7 +1013,7 @@ namespace math = {
   }
   atan = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "atan"
     },
@@ -1026,7 +1026,7 @@ namespace math = {
   }
   ln = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "ln"
     },
@@ -1039,7 +1039,7 @@ namespace math = {
   }
   log = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "log"
     },
@@ -1052,7 +1052,7 @@ namespace math = {
   }
   epow = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "e ^"
     },
@@ -1065,7 +1065,7 @@ namespace math = {
   }
   tenpow = {
     "opcode": "operator_mathop",
-    "type": "reporter",
+    "type": "any",
     "fields": {
       "OPERATOR": "10 ^"
     },
@@ -1080,27 +1080,27 @@ namespace math = {
 namespace pen = {
   clear = {
     "opcode": "pen_clear",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   stamp = {
     "opcode": "pen_stamp",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   penDown = {
     "opcode": "pen_penDown",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   penUp = {
     "opcode": "pen_penUp",
-    "type": "command",
+    "type": "void",
     "args": []
   }
   setColor = {
     "opcode": "pen_setPenColorToColor",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "COLOR",
@@ -1110,7 +1110,7 @@ namespace pen = {
   }
   setParam = {
     "opcode": "pen_setPenColorParamTo",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "COLOR_PARAM",
@@ -1124,7 +1124,7 @@ namespace pen = {
   }
   changeParam = {
     "opcode": "pen_changePenColorParamBy",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "COLOR_PARAM",
@@ -1138,7 +1138,7 @@ namespace pen = {
   }
   setSize = {
     "opcode": "pen_setPenSizeTo",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "SIZE",
@@ -1148,7 +1148,7 @@ namespace pen = {
   }
   changeSize = {
     "opcode": "pen_changePenSizeBy",
-    "type": "command",
+    "type": "void",
     "args": [
       {
         "name": "SIZE",
@@ -1160,7 +1160,7 @@ namespace pen = {
 namespace translate = {
   getTranslate = {
     "opcode": "translate_getTranslate",
-    "type": "reporter",
+    "type": "any",
     "args": [
       {
         "name": "WORDS",
@@ -1174,7 +1174,7 @@ namespace translate = {
   }
   getViewerLanguage = {
     "opcode": "translate_getViewerLanguage",
-    "type": "reporter",
+    "type": "any",
     "args": []
   }
 }
