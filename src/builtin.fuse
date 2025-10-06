@@ -329,7 +329,7 @@ namespace looks = {
     ]
   }
   clearEffects = {
-    "opcode": "looks_cleareffects",
+    "opcode": "looks_cleargraphiceffects",
     "type": "void",
     "args": []
   }
@@ -712,7 +712,7 @@ namespace control = {
     "args": []
   }
   onClone = {
-    "opcode": "control_whenclonestart",
+    "opcode": "control_start_as_clone",
     "type": "hat",
     "args": []
   }
