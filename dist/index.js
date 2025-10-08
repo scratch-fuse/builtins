@@ -1,0 +1,1248 @@
+"use strict";
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// src/index.ts
+var index_exports = {};
+__export(index_exports, {
+  Sb3Namespaces: () => Sb3Namespaces,
+  Sb3NamespacesRaw: () => Sb3NamespacesRaw
+});
+module.exports = __toCommonJS(index_exports);
+var import_core = require("@scratch-fuse/core");
+var import_compiler = require("@scratch-fuse/compiler");
+
+// src/builtin.fuse
+var builtin_default = `namespace motion = {
+  moveSteps = {
+    "opcode": "motion_movesteps",
+    "type": "void",
+    "args": [
+      {
+        "name": "STEPS",
+        "type": "any"
+      }
+    ]
+  }
+  turnRight = {
+    "opcode": "motion_turnright",
+    "type": "void",
+    "args": [
+      {
+        "name": "DEGREES",
+        "type": "any"
+      }
+    ]
+  }
+  turnLeft = {
+    "opcode": "motion_turnleft",
+    "type": "void",
+    "args": [
+      {
+        "name": "DEGREES",
+        "type": "any"
+      }
+    ]
+  }
+  goTo = {
+    "opcode": "motion_goto",
+    "type": "void",
+    "args": [
+      {
+        "name": "TO",
+        "type": "any"
+      }
+    ]
+  }
+  setXY = {
+    "opcode": "motion_gotoxy",
+    "type": "void",
+    "args": [
+      {
+        "name": "X",
+        "type": "any"
+      },
+      {
+        "name": "Y",
+        "type": "any"
+      }
+    ]
+  }
+  // Note: TO: _mouse_ or _random_
+  glideTo = {
+    "opcode": "motion_glideto",
+    "type": "void",
+    "args": [
+      {
+        "name": "SECS",
+        "type": "any"
+      },
+      {
+        "name": "TO",
+        "type": "any"
+      }
+    ]
+  }
+  glide = {
+    "opcode": "motion_glidesecstoxy",
+    "type": "void",
+    "args": [
+      {
+        "name": "SECS",
+        "type": "any"
+      },
+      {
+        "name": "X",
+        "type": "any"
+      },
+      {
+        "name": "Y",
+        "type": "any"
+      }
+    ]
+  }
+  pointInDirection = {
+    "opcode": "motion_pointindirection",
+    "type": "void",
+    "args": [
+      {
+        "name": "DIRECTION",
+        "type": "any"
+      }
+    ]
+  }
+  // Note: TOWARDS: _random_, _mouse_
+  pointTowards = {
+    "opcode": "motion_pointtowards",
+    "type": "void",
+    "args": [
+      {
+        "name": "TOWARDS",
+        "type": "any"
+      }
+    ]
+  }
+  changeX = {
+    "opcode": "motion_changexby",
+    "type": "void",
+    "args": [
+      {
+        "name": "DX",
+        "type": "any"
+      }
+    ]
+  }
+  setX = {
+    "opcode": "motion_setx",
+    "type": "void",
+    "args": [
+      {
+        "name": "X",
+        "type": "any"
+      }
+    ]
+  }
+  changeY = {
+    "opcode": "motion_changeyby",
+    "type": "void",
+    "args": [
+      {
+        "name": "DY",
+        "type": "any"
+      }
+    ]
+  }
+  setY = {
+    "opcode": "motion_sety",
+    "type": "void",
+    "args": [
+      {
+        "name": "Y",
+        "type": "any"
+      }
+    ]
+  }
+  ifOnEdgeBounce = {
+    "opcode": "motion_ifonedgebounce",
+    "type": "void",
+    "args": []
+  }
+  setRotationStyle = {
+    "opcode": "motion_setrotationstyle",
+    "type": "void",
+    "args": [
+      {
+        "name": "STYLE",
+        "type": "field",
+        "menu": {
+          "left-right": "left-right",
+          "no-rotate": "don\\'t rotate",
+          "all-around": "all around"
+        }
+      }
+    ]
+  }
+  x = {
+    "opcode": "motion_xposition",
+    "type": "any",
+    "args": []
+  }
+  y = {
+    "opcode": "motion_yposition",
+    "type": "any",
+    "args": []
+  }
+  direction = {
+    "opcode": "motion_direction",
+    "type": "any",
+    "args": []
+  }
+}
+namespace looks = {
+  sayForSecs = {
+    "opcode": "looks_sayforsecs",
+    "type": "void",
+    "args": [
+      {
+        "name": "MESSAGE",
+        "type": "any"
+      },
+      {
+        "name": "SECS",
+        "type": "any"
+      }
+    ]
+  }
+  say = {
+    "opcode": "looks_say",
+    "type": "void",
+    "args": [
+      {
+        "name": "MESSAGE",
+        "type": "any"
+      }
+    ]
+  }
+  thinkForSecs = {
+    "opcode": "looks_thinkforsecs",
+    "type": "void",
+    "args": [
+      {
+        "name": "MESSAGE",
+        "type": "any"
+      },
+      {
+        "name": "SECS",
+        "type": "any"
+      }
+    ]
+  }
+  think = {
+    "opcode": "looks_think",
+    "type": "void",
+    "args": [
+      {
+        "name": "MESSAGE",
+        "type": "any"
+      }
+    ]
+  }
+  switchCostume = {
+    "opcode": "looks_switchcostumeto",
+    "type": "void",
+    "args": [
+      {
+        "name": "COSTUME",
+        "type": "any"
+      }
+    ]
+  }
+  nextCostume = {
+    "opcode": "looks_nextcostume",
+    "type": "void",
+    "args": []
+  }
+  switchBackdrop = {
+    "opcode": "looks_switchbackdropto",
+    "type": "void",
+    "args": [
+      {
+        "name": "BACKDROP",
+        "type": "any"
+      }
+    ]
+  }
+  nextBackdrop = {
+    "opcode": "looks_nextbackdrop",
+    "type": "void",
+    "args": []
+  }
+  changeSize = {
+    "opcode": "looks_changesizeby",
+    "type": "void",
+    "args": [
+      {
+        "name": "DSIZE",
+        "type": "any"
+      }
+    ]
+  }
+  setSize = {
+    "opcode": "looks_setsizeto",
+    "type": "void",
+    "args": [
+      {
+        "name": "SIZE",
+        "type": "any"
+      }
+    ]
+  }
+  changeEffect = {
+    "opcode": "looks_changeeffectby",
+    "type": "void",
+    "args": [
+      {
+        "name": "EFFECT",
+        "type": "field",
+        "menu": {
+          "color": "COLOR",
+          "fisheye": "FISHEYE",
+          "whirl": "WHIRL",
+          "pixelate": "PIXELATE",
+          "mosaic": "MOSAIC",
+          "brightness": "BRIGHTNESS",
+          "ghost": "GHOST"
+        }
+      },
+      {
+        "name": "CHANGE",
+        "type": "any"
+      }
+    ]
+  }
+  setEffect = {
+    "opcode": "looks_seteffectto",
+    "type": "void",
+    "args": [
+      {
+        "name": "EFFECT",
+        "type": "field",
+        "menu": {
+          "color": "COLOR",
+          "fisheye": "FISHEYE",
+          "whirl": "WHIRL",
+          "pixelate": "PIXELATE",
+          "mosaic": "MOSAIC",
+          "brightness": "BRIGHTNESS",
+          "ghost": "GHOST"
+        }
+      },
+      {
+        "name": "VALUE",
+        "type": "any"
+      }
+    ]
+  }
+  clearEffects = {
+    "opcode": "looks_cleargraphiceffects",
+    "type": "void",
+    "args": []
+  }
+  show = {
+    "opcode": "looks_show",
+    "type": "void",
+    "args": []
+  }
+  hide = {
+    "opcode": "looks_hide",
+    "type": "void",
+    "args": []
+  }
+  setLayer = {
+    "opcode": "looks_gotofrontback",
+    "type": "void",
+    "args": [
+      {
+        "name": "FRONT_BACK",
+        "type": "field",
+        "menu": {
+          "front": "front",
+          "back": "back"
+        }
+      }
+    ]
+  }
+  _changeLayer = {
+    "opcode": "looks_goforwardbackwardlayers",
+    "type": "void",
+    "args": [
+      {
+        "name": "FORWARD_BACKWARD",
+        "type": "field",
+        "menu": {
+          "forward": "forward",
+          "backward": "backward"
+        }
+      },
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  changeLayer = {
+    "opcode": "looks_goforwardbackwardlayers",
+    "type": "void",
+    "fields": {
+      "FORWARD_BACKWARD": "forward"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  costumeName = {
+    "opcode": "looks_costumenumbername",
+    "type": "any",
+    "fields": {
+      "NUMBER_NAME": "name"
+    },
+    "args": []
+  }
+  costumeNumber = {
+    "opcode": "looks_costumenumbername",
+    "type": "any",
+    "fields": {
+      "NUMBER_NAME": "number"
+    },
+    "args": []
+  }
+  backdropName = {
+    "opcode": "looks_backdropnumbername",
+    "type": "any",
+    "fields": {
+      "NUMBER_NAME": "name"
+    },
+    "args": []
+  }
+  backdropNumber = {
+    "opcode": "looks_backdropnumbername",
+    "type": "any",
+    "fields": {
+      "NUMBER_NAME": "number"
+    },
+    "args": []
+  }
+  size = {
+    "opcode": "looks_size",
+    "type": "any",
+    "args": []
+  }
+}
+
+namespace sound = {
+  playSound = {
+    "opcode": "sound_play",
+    "type": "void",
+    "args": [
+      {
+        "name": "SOUND_MENU",
+        "type": "any"
+      }
+    ]
+  }
+  playSoundAwait = {
+    "opcode": "sound_playuntildone",
+    "type": "void",
+    "args": [
+      {
+        "name": "SOUND_MENU",
+        "type": "any"
+      }
+    ]
+  }
+  stopAllSounds = {
+    "opcode": "sound_stopallsounds",
+    "type": "void",
+    "args": []
+  }
+  changeEffect = {
+    "opcode": "sound_changeeffectby",
+    "type": "void",
+    "args": [
+      {
+        "name": "EFFECT",
+        "type": "field",
+        "menu": {
+          "pitch": "PITCH",
+          "pan": "PAN"
+        }
+      },
+      {
+        "name": "CHANGE",
+        "type": "any"
+      }
+    ]
+  }
+  setEffect = {
+    "opcode": "sound_seteffectto",
+    "type": "void",
+    "args": [
+      {
+        "name": "EFFECT",
+        "type": "field",
+        "menu": {
+          "pitch": "PITCH",
+          "pan": "PAN"
+        }
+      },
+      {
+        "name": "VALUE",
+        "type": "any"
+      }
+    ]
+  }
+  clearEffects = {
+    "opcode": "sound_cleareffects",
+    "type": "void",
+    "args": []
+  }
+  changeVolume = {
+    "opcode": "sound_changevolumeby",
+    "type": "void",
+    "args": [
+      {
+        "name": "VOLUME",
+        "type": "any"
+      }
+    ]
+  }
+  setVolume = {
+    "opcode": "sound_setvolumeto",
+    "type": "void",
+    "args": [
+      {
+        "name": "VOLUME",
+        "type": "any"
+      }
+    ]
+  }
+  volume = {
+    "opcode": "sound_volume",
+    "type": "any",
+    "args": []
+  }
+}
+namespace event = {
+  start = {
+    "opcode": "event_whenflagclicked",
+    "type": "hat",
+    "args": []
+  }
+  keyPressed = {
+    "opcode": "event_whenkeypressed",
+    "type": "hat",
+    "args": [
+      {
+        "name": "KEY_OPTION",
+        "type": "field",
+        "menu": {
+          " ": "space",
+          "up": "up arrow",
+          "down": "down arrow",
+          "left": "left arrow",
+          "right": "right arrow",
+          "": "any",
+          "a": "a",
+          "b": "b",
+          "c": "c",
+          "d": "d",
+          "e": "e",
+          "f": "f",
+          "g": "g",
+          "h": "h",
+          "i": "i",
+          "j": "j",
+          "k": "k",
+          "l": "l",
+          "m": "m",
+          "n": "n",
+          "o": "o",
+          "p": "p",
+          "q": "q",
+          "r": "r",
+          "s": "s",
+          "t": "t",
+          "u": "u",
+          "v": "v",
+          "w": "w",
+          "x": "x",
+          "y": "y",
+          "z": "z",
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        }
+      }
+    ]
+  }
+  sceneStart = {
+    "opcode": "event_whenbackdropswitchesto",
+    "type": "hat",
+    "args": [
+      {
+        "name": "BACKDROP",
+        "type": "any"
+      }
+    ]
+  }
+  thisSpriteClicked = {
+    "opcode": "event_whenthisspriteclicked",
+    "type": "hat",
+    "args": []
+  }
+  stageClicked = {
+    "opcode": "event_whenstageclicked",
+    "type": "hat",
+    "args": []
+  }
+  onBroadcast = {
+    "opcode": "event_whenbroadcastreceived",
+    "type": "hat",
+    "args": [
+      {
+        "name": "BROADCAST_OPTION",
+        "type": "field",
+        "menu": null
+      }
+    ]
+  }
+  broadcast = {
+    "opcode": "event_broadcast",
+    "type": "void",
+    "args": [
+      {
+        "name": "BROADCAST_INPUT",
+        "type": "any"
+      }
+    ]
+  }
+  broadcastAwait = {
+    "opcode": "event_broadcastandwait",
+    "type": "void",
+    "args": [
+      {
+        "name": "BROADCAST_INPUT",
+        "type": "any"
+      }
+    ]
+  }
+}
+namespace control = {
+  wait = {
+    "opcode": "control_wait",
+    "type": "void",
+    "args": [
+      {
+        "name": "DURATION",
+        "type": "any"
+      }
+    ]
+  }
+  until = {
+    "opcode": "control_repeat_until",
+    "type": "void",
+    "args": [
+      {
+        "name": "CONDITION",
+        "type": "bool"
+      },
+      {
+        "name": "SUBSTACK",
+        "type": "substack"
+      }
+    ]
+  }
+  repeat = {
+    "opcode": "control_repeat",
+    "type": "void",
+    "args": [
+      {
+        "name": "TIMES",
+        "type": "any"
+      },
+      {
+        "name": "SUBSTACK",
+        "type": "substack"
+      }
+    ]
+  }
+  watch = {
+    "opcode": "control_wait_until",
+    "type": "void",
+    "args": [
+      {
+        "name": "CONDITION",
+        "type": "bool"
+      }
+    ]
+  }
+  stop = {
+    "opcode": "control_stop",
+    "type": "void",
+    "args": [
+      {
+        "name": "STOP_OPTION",
+        "type": "field",
+        "menu": {
+          "all": "all",
+          "return": "this script",
+          "other": "other scripts in sprite"
+        }
+      }
+    ]
+  }
+  clone = {
+    "opcode": "control_create_clone_of",
+    "type": "void",
+    "args": [
+      {
+        "name": "CLONE_OPTION",
+        "type": "any"
+      }
+    ]
+  }
+  deleteSelf = {
+    "opcode": "control_delete_this_clone",
+    "type": "void",
+    "args": []
+  }
+  onClone = {
+    "opcode": "control_start_as_clone",
+    "type": "hat",
+    "args": []
+  }
+}
+namespace sensing = {
+  // NOTE: OBJECT: _mouse_, _edge_ or sprite name
+  touchingObject = {
+    "opcode": "sensing_touchingobject",
+    "type": "bool",
+    "args": [
+      {
+        "name": "TOUCHINGOBJECTMENU",
+        "type": "any"
+      }
+    ]
+  }
+  touchingColor = {
+    "opcode": "sensing_touchingcolor",
+    "type": "bool",
+    "args": [
+      {
+        "name": "COLOR",
+        "type": "any"
+      }
+    ]
+  }
+  colorTouchingColor = {
+    "opcode": "sensing_coloristouchingcolor",
+    "type": "bool",
+    "args": [
+      {
+        "name": "COLOR1",
+        "type": "any"
+      },
+      {
+        "name": "COLOR2",
+        "type": "any"
+      }
+    ]
+  }
+  // NOTE: DISTANCETOMENU: _mouse_ or sprite name
+  distanceTo = {
+    "opcode": "sensing_distanceto",
+    "type": "any",
+    "args": [
+      {
+        "name": "DISTANCETOMENU",
+        "type": "any"
+      }
+    ]
+  }
+  ask = {
+    "opcode": "sensing_askandwait",
+    "type": "void",
+    "args": []
+  }
+  askAnswer = {
+    "opcode": "sensing_answer",
+    "type": "any",
+    "args": []
+  }
+  isKeyPressed = {
+    "opcode": "sensing_keypressed",
+    "type": "bool",
+    "args": [
+      {
+        "name": "KEY_OPTION",
+        "type": "any"
+      }
+    ]
+  }
+  mouseX = {
+    "opcode": "sensing_mousex",
+    "type": "any",
+    "args": []
+  }
+  mouseY = {
+    "opcode": "sensing_mousey",
+    "type": "any",
+    "args": []
+  }
+  mouseDown = {
+    "opcode": "sensing_mousedown",
+    "type": "bool",
+    "args": []
+  }
+  setDragMode = {
+    "opcode": "sensing_setdragmode",
+    "type": "void",
+    "args": [
+      {
+        "name": "DRAG_MODE",
+        "type": "field",
+        "menu": {
+          "draggable": "draggable",
+          "undraggable": "not draggable"
+        }
+      }
+    ]
+  }
+  loudness = {
+    "opcode": "sensing_loudness",
+    "type": "any",
+    "args": []
+  }
+  timer = {
+    "opcode": "sensing_timer",
+    "type": "any",
+    "args": []
+  }
+  resetTimer = {
+    "opcode": "sensing_resettimer",
+    "type": "void",
+    "args": []
+  }
+  of = {
+    "opcode": "sensing_of",
+    "type": "any",
+    "args": [
+      {
+        "name": "OBJECT",
+        "type": "any"
+      },
+      {
+        "name": "PROPERTY",
+        "type": "field",
+        "menu": null
+      }
+    ]
+  }
+  current = {
+    "opcode": "sensing_current",
+    "type": "any",
+    "args": [
+      {
+        "name": "CURRENTMENU",
+        "type": "field",
+        "menu": {
+          "year": "year",
+          "month": "month",
+          "date": "date",
+          "dayofweek": "day of week",
+          "hour": "hour",
+          "minute": "minute",
+          "second": "second"
+        }
+      }
+    ]
+  }
+  daysSince2000 = {
+    "opcode": "sensing_dayssince2000",
+    "type": "any",
+    "args": []
+  }
+  username = {
+    "opcode": "sensing_username",
+    "type": "any",
+    "args": []
+  }
+}
+namespace math = {
+  random = {
+    "opcode": "operator_random",
+    "type": "any",
+    "args": [
+      {
+        "name": "FROM",
+        "type": "any"
+      },
+      {
+        "name": "TO",
+        "type": "any"
+      }
+    ]
+  }
+  round = {
+    "opcode": "operator_round",
+    "type": "any",
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  // mathop
+  abs = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "abs"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  floor = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "floor"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  ceil = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "ceiling"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  sqrt = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "sqrt"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  sin = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "sin"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  cos = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "cos"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  tan = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "tan"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  asin = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "asin"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  acos = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "acos"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  atan = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "atan"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  ln = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "ln"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  log = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "log"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  epow = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "e ^"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+  tenpow = {
+    "opcode": "operator_mathop",
+    "type": "any",
+    "fields": {
+      "OPERATOR": "10 ^"
+    },
+    "args": [
+      {
+        "name": "NUM",
+        "type": "any"
+      }
+    ]
+  }
+}
+namespace pen = {
+  clear = {
+    "opcode": "pen_clear",
+    "type": "void",
+    "args": []
+  }
+  stamp = {
+    "opcode": "pen_stamp",
+    "type": "void",
+    "args": []
+  }
+  penDown = {
+    "opcode": "pen_penDown",
+    "type": "void",
+    "args": []
+  }
+  penUp = {
+    "opcode": "pen_penUp",
+    "type": "void",
+    "args": []
+  }
+  setColor = {
+    "opcode": "pen_setPenColorToColor",
+    "type": "void",
+    "args": [
+      {
+        "name": "COLOR",
+        "type": "any"
+      }
+    ]
+  }
+  setParam = {
+    "opcode": "pen_setPenColorParamTo",
+    "type": "void",
+    "args": [
+      {
+        "name": "COLOR_PARAM",
+        "type": "any"
+      },
+      {
+        "name": "VALUE",
+        "type": "any"
+      }
+    ]
+  }
+  changeParam = {
+    "opcode": "pen_changePenColorParamBy",
+    "type": "void",
+    "args": [
+      {
+        "name": "COLOR_PARAM",
+        "type": "any"
+      },
+      {
+        "name": "VALUE",
+        "type": "any"
+      }
+    ]
+  }
+  setSize = {
+    "opcode": "pen_setPenSizeTo",
+    "type": "void",
+    "args": [
+      {
+        "name": "SIZE",
+        "type": "any"
+      }
+    ]
+  }
+  changeSize = {
+    "opcode": "pen_changePenSizeBy",
+    "type": "void",
+    "args": [
+      {
+        "name": "SIZE",
+        "type": "any"
+      }
+    ]
+  }
+}
+namespace translate = {
+  getTranslate = {
+    "opcode": "translate_getTranslate",
+    "type": "any",
+    "args": [
+      {
+        "name": "WORDS",
+        "type": "any"
+      },
+      {
+        "name": "LANGUAGE",
+        "type": "any"
+      }
+    ]
+  }
+  getViewerLanguage = {
+    "opcode": "translate_getViewerLanguage",
+    "type": "any",
+    "args": []
+  }
+}
+namespace tw = {
+  isTurbowarp = {
+    "opcode": "argument_reporter_boolean",
+    "type": "bool",
+    "fields": {
+      "VALUE": "is TurboWarp?"
+    },
+    "args": []
+  }
+  isCompiled = {
+    "opcode": "argument_reporter_boolean",
+    "type": "bool",
+    "fields": {
+      "VALUE": "is compiled?"
+    },
+    "args": []
+  }
+}
+`;
+
+// src/index.ts
+var Sb3NamespacesRaw = builtin_default;
+var Sb3Namespaces = (() => {
+  const lexer = new import_core.Lexer(Sb3NamespacesRaw);
+  const parser = new import_core.Parser(lexer);
+  const program = parser.parse();
+  return (0, import_compiler.getProgramInfo)(program).namespaces;
+})();
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  Sb3Namespaces,
+  Sb3NamespacesRaw
+});
