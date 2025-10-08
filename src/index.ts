@@ -6,7 +6,7 @@ export const Sb3NamespacesRaw = fuse
 
 export const Sb3Namespaces = (() => {
   const lexer = new Lexer(Sb3NamespacesRaw)
-  const parser = new Parser(lexer.all())
+  const parser = new Parser(lexer)
   const program = parser.parse()
   return getProgramInfo(program).namespaces
 })()

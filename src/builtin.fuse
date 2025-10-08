@@ -1183,3 +1183,21 @@ namespace translate = {
     "args": []
   }
 }
+namespace tw = {
+  isTurbowarp = {
+    "opcode": "argument_reporter_boolean",
+    "type": "bool",
+    "fields": {
+      "VALUE": "is TurboWarp?"
+    },
+    "args": []
+  }
+  isCompiled = {
+    "opcode": "argument_reporter_boolean",
+    "type": "bool",
+    "fields": {
+      "VALUE": "is compiled?"
+    },
+    "args": []
+  }
+}
