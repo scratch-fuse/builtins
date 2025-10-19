@@ -1,5 +1,5 @@
-namespace motion = {
-  moveSteps = {
+module motion {
+  extern moveSteps = {
     "opcode": "motion_movesteps",
     "type": "void",
     "args": [
@@ -9,7 +9,7 @@ namespace motion = {
       }
     ]
   }
-  turnRight = {
+  extern turnRight = {
     "opcode": "motion_turnright",
     "type": "void",
     "args": [
@@ -19,7 +19,7 @@ namespace motion = {
       }
     ]
   }
-  turnLeft = {
+  extern turnLeft = {
     "opcode": "motion_turnleft",
     "type": "void",
     "args": [
@@ -29,7 +29,7 @@ namespace motion = {
       }
     ]
   }
-  goTo = {
+  extern goTo = {
     "opcode": "motion_goto",
     "type": "void",
     "args": [
@@ -39,7 +39,7 @@ namespace motion = {
       }
     ]
   }
-  setXY = {
+  extern setXY = {
     "opcode": "motion_gotoxy",
     "type": "void",
     "args": [
@@ -54,7 +54,7 @@ namespace motion = {
     ]
   }
   // Note: TO: _mouse_ or _random_
-  glideTo = {
+  extern glideTo = {
     "opcode": "motion_glideto",
     "type": "void",
     "args": [
@@ -68,7 +68,7 @@ namespace motion = {
       }
     ]
   }
-  glide = {
+  extern glide = {
     "opcode": "motion_glidesecstoxy",
     "type": "void",
     "args": [
@@ -86,7 +86,7 @@ namespace motion = {
       }
     ]
   }
-  pointInDirection = {
+  extern pointInDirection = {
     "opcode": "motion_pointindirection",
     "type": "void",
     "args": [
@@ -97,7 +97,7 @@ namespace motion = {
     ]
   }
   // Note: TOWARDS: _random_, _mouse_
-  pointTowards = {
+  extern pointTowards = {
     "opcode": "motion_pointtowards",
     "type": "void",
     "args": [
@@ -107,7 +107,7 @@ namespace motion = {
       }
     ]
   }
-  changeX = {
+  extern changeX = {
     "opcode": "motion_changexby",
     "type": "void",
     "args": [
@@ -117,7 +117,7 @@ namespace motion = {
       }
     ]
   }
-  setX = {
+  extern setX = {
     "opcode": "motion_setx",
     "type": "void",
     "args": [
@@ -127,7 +127,7 @@ namespace motion = {
       }
     ]
   }
-  changeY = {
+  extern changeY = {
     "opcode": "motion_changeyby",
     "type": "void",
     "args": [
@@ -137,7 +137,7 @@ namespace motion = {
       }
     ]
   }
-  setY = {
+  extern setY = {
     "opcode": "motion_sety",
     "type": "void",
     "args": [
@@ -147,12 +147,12 @@ namespace motion = {
       }
     ]
   }
-  ifOnEdgeBounce = {
+  extern ifOnEdgeBounce = {
     "opcode": "motion_ifonedgebounce",
     "type": "void",
     "args": []
   }
-  setRotationStyle = {
+  extern setRotationStyle = {
     "opcode": "motion_setrotationstyle",
     "type": "void",
     "args": [
@@ -167,24 +167,24 @@ namespace motion = {
       }
     ]
   }
-  x = {
+  extern x = {
     "opcode": "motion_xposition",
     "type": "any",
     "args": []
   }
-  y = {
+  extern y = {
     "opcode": "motion_yposition",
     "type": "any",
     "args": []
   }
-  direction = {
+  extern direction = {
     "opcode": "motion_direction",
     "type": "any",
     "args": []
   }
 }
-namespace looks = {
-  sayForSecs = {
+module looks {
+  extern sayForSecs = {
     "opcode": "looks_sayforsecs",
     "type": "void",
     "args": [
@@ -198,7 +198,7 @@ namespace looks = {
       }
     ]
   }
-  say = {
+  extern say = {
     "opcode": "looks_say",
     "type": "void",
     "args": [
@@ -208,7 +208,7 @@ namespace looks = {
       }
     ]
   }
-  thinkForSecs = {
+  extern thinkForSecs = {
     "opcode": "looks_thinkforsecs",
     "type": "void",
     "args": [
@@ -222,7 +222,7 @@ namespace looks = {
       }
     ]
   }
-  think = {
+  extern think = {
     "opcode": "looks_think",
     "type": "void",
     "args": [
@@ -232,7 +232,7 @@ namespace looks = {
       }
     ]
   }
-  switchCostume = {
+  extern switchCostume = {
     "opcode": "looks_switchcostumeto",
     "type": "void",
     "args": [
@@ -242,12 +242,12 @@ namespace looks = {
       }
     ]
   }
-  nextCostume = {
+  extern nextCostume = {
     "opcode": "looks_nextcostume",
     "type": "void",
     "args": []
   }
-  switchBackdrop = {
+  extern switchBackdrop = {
     "opcode": "looks_switchbackdropto",
     "type": "void",
     "args": [
@@ -257,12 +257,12 @@ namespace looks = {
       }
     ]
   }
-  nextBackdrop = {
+  extern nextBackdrop = {
     "opcode": "looks_nextbackdrop",
     "type": "void",
     "args": []
   }
-  changeSize = {
+  extern changeSize = {
     "opcode": "looks_changesizeby",
     "type": "void",
     "args": [
@@ -272,7 +272,7 @@ namespace looks = {
       }
     ]
   }
-  setSize = {
+  extern setSize = {
     "opcode": "looks_setsizeto",
     "type": "void",
     "args": [
@@ -282,7 +282,7 @@ namespace looks = {
       }
     ]
   }
-  changeEffect = {
+  extern changeEffect = {
     "opcode": "looks_changeeffectby",
     "type": "void",
     "args": [
@@ -305,7 +305,7 @@ namespace looks = {
       }
     ]
   }
-  setEffect = {
+  extern setEffect = {
     "opcode": "looks_seteffectto",
     "type": "void",
     "args": [
@@ -328,22 +328,22 @@ namespace looks = {
       }
     ]
   }
-  clearEffects = {
+  extern clearEffects = {
     "opcode": "looks_cleargraphiceffects",
     "type": "void",
     "args": []
   }
-  show = {
+  extern show = {
     "opcode": "looks_show",
     "type": "void",
     "args": []
   }
-  hide = {
+  extern hide = {
     "opcode": "looks_hide",
     "type": "void",
     "args": []
   }
-  setLayer = {
+  extern setLayer = {
     "opcode": "looks_gotofrontback",
     "type": "void",
     "args": [
@@ -357,7 +357,7 @@ namespace looks = {
       }
     ]
   }
-  _changeLayer = {
+  extern _changeLayer = {
     "opcode": "looks_goforwardbackwardlayers",
     "type": "void",
     "args": [
@@ -375,7 +375,7 @@ namespace looks = {
       }
     ]
   }
-  changeLayer = {
+  extern changeLayer = {
     "opcode": "looks_goforwardbackwardlayers",
     "type": "void",
     "fields": {
@@ -388,7 +388,7 @@ namespace looks = {
       }
     ]
   }
-  costumeName = {
+  extern costumeName = {
     "opcode": "looks_costumenumbername",
     "type": "any",
     "fields": {
@@ -396,7 +396,7 @@ namespace looks = {
     },
     "args": []
   }
-  costumeNumber = {
+  extern costumeNumber = {
     "opcode": "looks_costumenumbername",
     "type": "any",
     "fields": {
@@ -404,7 +404,7 @@ namespace looks = {
     },
     "args": []
   }
-  backdropName = {
+  extern backdropName = {
     "opcode": "looks_backdropnumbername",
     "type": "any",
     "fields": {
@@ -412,7 +412,7 @@ namespace looks = {
     },
     "args": []
   }
-  backdropNumber = {
+  extern backdropNumber = {
     "opcode": "looks_backdropnumbername",
     "type": "any",
     "fields": {
@@ -420,15 +420,15 @@ namespace looks = {
     },
     "args": []
   }
-  size = {
+  extern size = {
     "opcode": "looks_size",
     "type": "any",
     "args": []
   }
 }
 
-namespace sound = {
-  playSound = {
+module sound {
+  extern playSound = {
     "opcode": "sound_play",
     "type": "void",
     "args": [
@@ -438,7 +438,7 @@ namespace sound = {
       }
     ]
   }
-  playSoundAwait = {
+  extern playSoundAwait = {
     "opcode": "sound_playuntildone",
     "type": "void",
     "args": [
@@ -448,12 +448,12 @@ namespace sound = {
       }
     ]
   }
-  stopAllSounds = {
+  extern stopAllSounds = {
     "opcode": "sound_stopallsounds",
     "type": "void",
     "args": []
   }
-  changeEffect = {
+  extern changeEffect = {
     "opcode": "sound_changeeffectby",
     "type": "void",
     "args": [
@@ -471,7 +471,7 @@ namespace sound = {
       }
     ]
   }
-  setEffect = {
+  extern setEffect = {
     "opcode": "sound_seteffectto",
     "type": "void",
     "args": [
@@ -489,12 +489,12 @@ namespace sound = {
       }
     ]
   }
-  clearEffects = {
+  extern clearEffects = {
     "opcode": "sound_cleareffects",
     "type": "void",
     "args": []
   }
-  changeVolume = {
+  extern changeVolume = {
     "opcode": "sound_changevolumeby",
     "type": "void",
     "args": [
@@ -504,7 +504,7 @@ namespace sound = {
       }
     ]
   }
-  setVolume = {
+  extern setVolume = {
     "opcode": "sound_setvolumeto",
     "type": "void",
     "args": [
@@ -514,19 +514,19 @@ namespace sound = {
       }
     ]
   }
-  volume = {
+  extern volume = {
     "opcode": "sound_volume",
     "type": "any",
     "args": []
   }
 }
-namespace event = {
-  start = {
+module event {
+  extern start = {
     "opcode": "event_whenflagclicked",
     "type": "hat",
     "args": []
   }
-  keyPressed = {
+  extern keyPressed = {
     "opcode": "event_whenkeypressed",
     "type": "hat",
     "args": [
@@ -580,7 +580,7 @@ namespace event = {
       }
     ]
   }
-  sceneStart = {
+  extern sceneStart = {
     "opcode": "event_whenbackdropswitchesto",
     "type": "hat",
     "args": [
@@ -590,17 +590,17 @@ namespace event = {
       }
     ]
   }
-  thisSpriteClicked = {
+  extern thisSpriteClicked = {
     "opcode": "event_whenthisspriteclicked",
     "type": "hat",
     "args": []
   }
-  stageClicked = {
+  extern stageClicked = {
     "opcode": "event_whenstageclicked",
     "type": "hat",
     "args": []
   }
-  onBroadcast = {
+  extern onBroadcast = {
     "opcode": "event_whenbroadcastreceived",
     "type": "hat",
     "args": [
@@ -611,7 +611,7 @@ namespace event = {
       }
     ]
   }
-  broadcast = {
+  extern broadcast = {
     "opcode": "event_broadcast",
     "type": "void",
     "args": [
@@ -621,7 +621,7 @@ namespace event = {
       }
     ]
   }
-  broadcastAwait = {
+  extern broadcastAwait = {
     "opcode": "event_broadcastandwait",
     "type": "void",
     "args": [
@@ -632,8 +632,8 @@ namespace event = {
     ]
   }
 }
-namespace control = {
-  wait = {
+module control {
+  extern wait = {
     "opcode": "control_wait",
     "type": "void",
     "args": [
@@ -643,7 +643,7 @@ namespace control = {
       }
     ]
   }
-  until = {
+  extern until = {
     "opcode": "control_repeat_until",
     "type": "void",
     "args": [
@@ -657,7 +657,7 @@ namespace control = {
       }
     ]
   }
-  repeat = {
+  extern repeat = {
     "opcode": "control_repeat",
     "type": "void",
     "args": [
@@ -671,7 +671,7 @@ namespace control = {
       }
     ]
   }
-  watch = {
+  extern watch = {
     "opcode": "control_wait_until",
     "type": "void",
     "args": [
@@ -681,7 +681,7 @@ namespace control = {
       }
     ]
   }
-  stop = {
+  extern stop = {
     "opcode": "control_stop",
     "type": "void",
     "args": [
@@ -696,7 +696,7 @@ namespace control = {
       }
     ]
   }
-  clone = {
+  extern clone = {
     "opcode": "control_create_clone_of",
     "type": "void",
     "args": [
@@ -706,20 +706,20 @@ namespace control = {
       }
     ]
   }
-  deleteSelf = {
+  extern deleteSelf = {
     "opcode": "control_delete_this_clone",
     "type": "void",
     "args": []
   }
-  onClone = {
+  extern onClone = {
     "opcode": "control_start_as_clone",
     "type": "hat",
     "args": []
   }
 }
-namespace sensing = {
+module sensing {
   // NOTE: OBJECT: _mouse_, _edge_ or sprite name
-  touchingObject = {
+  extern touchingObject = {
     "opcode": "sensing_touchingobject",
     "type": "bool",
     "args": [
@@ -729,7 +729,7 @@ namespace sensing = {
       }
     ]
   }
-  touchingColor = {
+  extern touchingColor = {
     "opcode": "sensing_touchingcolor",
     "type": "bool",
     "args": [
@@ -739,7 +739,7 @@ namespace sensing = {
       }
     ]
   }
-  colorTouchingColor = {
+  extern colorTouchingColor = {
     "opcode": "sensing_coloristouchingcolor",
     "type": "bool",
     "args": [
@@ -754,7 +754,7 @@ namespace sensing = {
     ]
   }
   // NOTE: DISTANCETOMENU: _mouse_ or sprite name
-  distanceTo = {
+  extern distanceTo = {
     "opcode": "sensing_distanceto",
     "type": "any",
     "args": [
@@ -764,17 +764,17 @@ namespace sensing = {
       }
     ]
   }
-  ask = {
+  extern ask = {
     "opcode": "sensing_askandwait",
     "type": "void",
     "args": []
   }
-  askAnswer = {
+  extern askAnswer = {
     "opcode": "sensing_answer",
     "type": "any",
     "args": []
   }
-  isKeyPressed = {
+  extern isKeyPressed = {
     "opcode": "sensing_keypressed",
     "type": "bool",
     "args": [
@@ -784,22 +784,22 @@ namespace sensing = {
       }
     ]
   }
-  mouseX = {
+  extern mouseX = {
     "opcode": "sensing_mousex",
     "type": "any",
     "args": []
   }
-  mouseY = {
+  extern mouseY = {
     "opcode": "sensing_mousey",
     "type": "any",
     "args": []
   }
-  mouseDown = {
+  extern mouseDown = {
     "opcode": "sensing_mousedown",
     "type": "bool",
     "args": []
   }
-  setDragMode = {
+  extern setDragMode = {
     "opcode": "sensing_setdragmode",
     "type": "void",
     "args": [
@@ -813,22 +813,22 @@ namespace sensing = {
       }
     ]
   }
-  loudness = {
+  extern loudness = {
     "opcode": "sensing_loudness",
     "type": "any",
     "args": []
   }
-  timer = {
+  extern timer = {
     "opcode": "sensing_timer",
     "type": "any",
     "args": []
   }
-  resetTimer = {
+  extern resetTimer = {
     "opcode": "sensing_resettimer",
     "type": "void",
     "args": []
   }
-  of = {
+  extern of = {
     "opcode": "sensing_of",
     "type": "any",
     "args": [
@@ -843,7 +843,7 @@ namespace sensing = {
       }
     ]
   }
-  current = {
+  extern current = {
     "opcode": "sensing_current",
     "type": "any",
     "args": [
@@ -862,19 +862,19 @@ namespace sensing = {
       }
     ]
   }
-  daysSince2000 = {
+  extern daysSince2000 = {
     "opcode": "sensing_dayssince2000",
     "type": "any",
     "args": []
   }
-  username = {
+  extern username = {
     "opcode": "sensing_username",
     "type": "any",
     "args": []
   }
 }
-namespace math = {
-  random = {
+module math {
+  extern random = {
     "opcode": "operator_random",
     "type": "any",
     "args": [
@@ -888,7 +888,7 @@ namespace math = {
       }
     ]
   }
-  round = {
+  extern round = {
     "opcode": "operator_round",
     "type": "any",
     "args": [
@@ -899,7 +899,7 @@ namespace math = {
     ]
   }
   // mathop
-  abs = {
+  extern abs = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -912,7 +912,7 @@ namespace math = {
       }
     ]
   }
-  floor = {
+  extern floor = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -925,7 +925,7 @@ namespace math = {
       }
     ]
   }
-  ceil = {
+  extern ceil = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -938,7 +938,7 @@ namespace math = {
       }
     ]
   }
-  sqrt = {
+  extern sqrt = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -951,7 +951,7 @@ namespace math = {
       }
     ]
   }
-  sin = {
+  extern sin = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -964,7 +964,7 @@ namespace math = {
       }
     ]
   }
-  cos = {
+  extern cos = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -977,7 +977,7 @@ namespace math = {
       }
     ]
   }
-  tan = {
+  extern tan = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -990,7 +990,7 @@ namespace math = {
       }
     ]
   }
-  asin = {
+  extern asin = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -1003,7 +1003,7 @@ namespace math = {
       }
     ]
   }
-  acos = {
+  extern acos = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -1016,7 +1016,7 @@ namespace math = {
       }
     ]
   }
-  atan = {
+  extern atan = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -1029,7 +1029,7 @@ namespace math = {
       }
     ]
   }
-  ln = {
+  extern ln = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -1042,7 +1042,7 @@ namespace math = {
       }
     ]
   }
-  log = {
+  extern log = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -1055,7 +1055,7 @@ namespace math = {
       }
     ]
   }
-  epow = {
+  extern epow = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -1068,7 +1068,7 @@ namespace math = {
       }
     ]
   }
-  tenpow = {
+  extern tenpow = {
     "opcode": "operator_mathop",
     "type": "any",
     "fields": {
@@ -1082,28 +1082,28 @@ namespace math = {
     ]
   }
 }
-namespace pen = {
-  clear = {
+module pen {
+  extern clear = {
     "opcode": "pen_clear",
     "type": "void",
     "args": []
   }
-  stamp = {
+  extern stamp = {
     "opcode": "pen_stamp",
     "type": "void",
     "args": []
   }
-  penDown = {
+  extern penDown = {
     "opcode": "pen_penDown",
     "type": "void",
     "args": []
   }
-  penUp = {
+  extern penUp = {
     "opcode": "pen_penUp",
     "type": "void",
     "args": []
   }
-  setColor = {
+  extern setColor = {
     "opcode": "pen_setPenColorToColor",
     "type": "void",
     "args": [
@@ -1113,7 +1113,7 @@ namespace pen = {
       }
     ]
   }
-  setParam = {
+  extern setParam = {
     "opcode": "pen_setPenColorParamTo",
     "type": "void",
     "args": [
@@ -1127,7 +1127,7 @@ namespace pen = {
       }
     ]
   }
-  changeParam = {
+  extern changeParam = {
     "opcode": "pen_changePenColorParamBy",
     "type": "void",
     "args": [
@@ -1141,7 +1141,7 @@ namespace pen = {
       }
     ]
   }
-  setSize = {
+  extern setSize = {
     "opcode": "pen_setPenSizeTo",
     "type": "void",
     "args": [
@@ -1151,7 +1151,7 @@ namespace pen = {
       }
     ]
   }
-  changeSize = {
+  extern changeSize = {
     "opcode": "pen_changePenSizeBy",
     "type": "void",
     "args": [
@@ -1162,8 +1162,8 @@ namespace pen = {
     ]
   }
 }
-namespace translate = {
-  getTranslate = {
+module translate {
+  extern getTranslate = {
     "opcode": "translate_getTranslate",
     "type": "any",
     "args": [
@@ -1177,14 +1177,14 @@ namespace translate = {
       }
     ]
   }
-  getViewerLanguage = {
+  extern getViewerLanguage = {
     "opcode": "translate_getViewerLanguage",
     "type": "any",
     "args": []
   }
 }
-namespace tw = {
-  isTurbowarp = {
+module tw {
+  extern isTurbowarp = {
     "opcode": "argument_reporter_boolean",
     "type": "bool",
     "fields": {
@@ -1192,7 +1192,7 @@ namespace tw = {
     },
     "args": []
   }
-  isCompiled = {
+  extern isCompiled = {
     "opcode": "argument_reporter_boolean",
     "type": "bool",
     "fields": {
